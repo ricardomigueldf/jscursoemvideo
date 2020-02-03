@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 4</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <script>
+        var nome = window.prompt("Qual aé o seu nome?") 
+        document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`)
+        document.write(`O seu nome em maiúsculas ficará assim: ${nome.toUpperCase()}.<br/>`) // aceita acentuação
+        document.write(`O seu nome em minúsculas ficará assim: ${nome.toLowerCase()}.<br/>`) // não importa como escreveu Ex.: ConCeiÇãO
+
+        /* Formatando para moeda do Brasil  - ainda não funcioou */
+        var salario = window.prompt(`Qual é o seu salário?`)
+        document.write(`O seu salário é: ${salario.toFixed(2)}`)
+        document.write(`O seu salário é: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+                    
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style> /* CSS */
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o Resultado</p>
+    <p>Apredendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div>
+    <h1>Título Teste</h1>
+
+    <div id='msg'> Div com elemento id </div>
+
+    <div name='mensagem'>Div com elemento name</div>
+
+    <div class="msg">Div com elemento Classe</div>
+
+
+
+    <script>
+        
+        /* Exemplos
+         Métodos de Acesso
+         Seleção de Elementos 
+         por Marca - getElementsByTagName
+         por ser Elements, permite acesso a mais de um elemento
+
+
+        // Exemplo 1 - window é opcional
+        window.document.write("Exemplo 1 - URL: " + window.document.URL + "<br/>")
+      
+        // Exemplo 2        
+        window.document.write("Exemplo 2 - Navegador: " + window.navigator.appName + "<br/>" )
+
+        // Exemplo 3
+        window.document.write("Exemplo 3 - Tipos de Caractere: " + window.document.charset + "<br/>")
+
+        // Exemplo 4
+        var p1 = window.document.getElementsByTagName('p')[0] // selecionando parágrafo 1
+        window.document.write("Está escrito assim: " + p1.innerText + "<br/>") //texto que tá dentro do parágrafto 1 sem considerar o HTML
+
+        // Exemplo 5 
+        var p1 = window.document.getElementsByTagName('p' + '<br/>')[0]
+        window.document.write(p1.innerText)
+
+        // Exemplo 6
+        var p1 = window.document.getElementsByTagName('p')[1] // numero parágrafo 2 
+        window.document.write(p1.innerHTML + "<br/>") // pega o parágrafo da forma que está no HTML.
+
+        // Exemplo 7 Mudando a cor
+        var h1 = window.document.getElementsByTagName('h1')[0]
+        h1.style.color = 'blue'
+        window.document.write(h1.innerText)
+
+        // Transformar o fundo
+        var corpo = window.document.body //variável corpo acessa body
+        corpo.style.background = "black"
+
+                   
+
+        // Usando Alerta
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.alert('Atenção, ' + p1.innerText)
+
+        */ 
+
+            
+        //getElementById - 
+       /* var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = "estou de olho..." // Mudo o texto via JavaScript
+        */
+
+        //getElementeByClassName
+        /*
+        var a = window.document.getElementsByClassName('msg')[0]
+        a.innerText("Oi")
+        */
+
+        //Usando Quey Selector - class uso ponto .
+        var i = window.document.querySelector('div.msg')
+        i.style.background = 'blue'
+
+        //Usando Query Selector - id uso hastag #
+        var j = window.document.querySelector('div#msg')
+        j.style.background = 'red'
+
+        
+        
+
+
+
+
+    </script>
+
+</body>
+</html>
