@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 25pt Arial;
+            color: rgb(10, 12, 55);
+        }
+        input {
+            width: 150px;
+            font-size: 20pt;
+        }
+    </style>
 </head>
 <body>
-    <h1>Você é daqui?<h1>
-    Informe o país: <input type="text" name="txtpais">
+    <h1>Você é de qual país?</h1>
+    Informe: <input type="text" name="txtpais" id="txtpais">
     <input type="button" value="Verificar" onclick="verificar()">
     <div id="res">Resultado:</div>
 
+<script>
+    function verificar(){
+        var txtp = window.document.querySelector('input#txtpais')
+        var res = window.document.querySelector('div#res')
+        var nac = (txtp.value)
+        res.innerHTML = `Este é o seu país: <strong>${nac}.</strong>`
+        if (nac == "Brasil"){
+            res.innerHTML += '<p>Que lega, você é <strong>Brasileiro.</strong></p>'
+        } else {
+            res.innerHTML += '<p>Então, vocé é <strong>Estrangeiro.</strong></p>'
+        }
 
+    }
+</script>
 
 </body>
 </html>
