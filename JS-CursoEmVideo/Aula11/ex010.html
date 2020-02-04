@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Detran</title>
     <style>
-        
+        body {
+            font: normal 20pt Arial;
+        }
     </style>
 </head>
 <body>
     <h1>Sistema de multas</h1>
     Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
-    <input type="button" value="verificar" onclick="calcular()">
+    <input type="button" value="Verificar" onclick="calcular()">
     <div id="res">Resultado:</div>
 
     <script>
@@ -26,9 +28,7 @@
                 res.innerHTML += `Você foi <strong>multado</strong> por excesso de velocidade`
             }
             res.innerHTML += `<p>Dirija sempre utilizando o cinto de segurança </p>` //concatenando o texto (pois é string)    
-            
-
-
+          
         }
         
     </script>
